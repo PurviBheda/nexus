@@ -52,6 +52,10 @@ export interface EvidenceItem {
   addedBy?: string;
   uploadedAt?: string;
   relationships?: EvidenceRelationship[];
+  processingStage?: string;
+  fileType?: string;
+  storagePath?: string;
+  rawMetadata?: Record<string, any>;
 }
 
 export interface InvestigationCase {
