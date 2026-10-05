@@ -1,0 +1,10 @@
+{
+  "description": "Streamline multimodal investigations with an AI-powered platform that analyzes video, audio, documents, and images, enhancing efficiency for enterprise users.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
