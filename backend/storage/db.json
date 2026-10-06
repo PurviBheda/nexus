@@ -26,7 +26,7 @@
       "file_type": "video/mp4",
       "file_size": 1288490188,
       "status": "analyzed",
-      "processing_stage": "ready_for_ai",
+      "processing_stage": "processed",
       "storage_path": "uploads/CASE-001/CCTV_intersection.mp4",
       "content": "Intersection security camera recording showing Vehicle A entering intersection eastbound on Market St and Vehicle B initiating left turn.",
       "timestamp_start": "18:39:34",
@@ -54,7 +54,74 @@
           "target": "Vehicle A damage photos",
           "confidence": 89.0
         }
-      ]
+      ],
+      "extracted_units": [
+        {
+          "case_id": "CASE-001",
+          "source_file": "CCTV_intersection.mp4",
+          "modality": "video",
+          "content": "Vehicle appears to be moving toward the intersection in eastbound lane on Market St.",
+          "timestamp_start": 252.0,
+          "timestamp_end": 260.0,
+          "speaker": null,
+          "confidence": 0.88,
+          "evidence_type": "video_event",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-001",
+          "parent_evidence_id": "EVD-001",
+          "id": "EVD-001_event_001",
+          "created_at": "2026-10-06T06:43:32.147583+00:00"
+        },
+        {
+          "case_id": "CASE-001",
+          "source_file": "CCTV_intersection.mp4",
+          "modality": "video",
+          "content": "Second vehicle visible executing turn across oncoming traffic lane.",
+          "timestamp_start": 261.0,
+          "timestamp_end": 268.0,
+          "speaker": null,
+          "confidence": 0.92,
+          "evidence_type": "video_event",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-001",
+          "parent_evidence_id": "EVD-001",
+          "id": "EVD-001_event_002",
+          "created_at": "2026-10-06T06:43:32.147583+00:00"
+        },
+        {
+          "case_id": "CASE-001",
+          "source_file": "CCTV_intersection.mp4",
+          "modality": "video",
+          "content": "Apparent contact observed near center of intersection zone.",
+          "timestamp_start": 269.0,
+          "timestamp_end": 273.0,
+          "speaker": null,
+          "confidence": 0.95,
+          "evidence_type": "video_event",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-001",
+          "parent_evidence_id": "EVD-001",
+          "id": "EVD-001_event_003",
+          "created_at": "2026-10-06T06:43:32.147583+00:00"
+        }
+      ],
+      "ai_summary": {
+        "evidence_id": "EVD-001",
+        "case_id": "CASE-001",
+        "source_file": "CCTV_intersection.mp4",
+        "modality": "video",
+        "status": "processed",
+        "processing_stage": "processed",
+        "extracted_units_count": 3,
+        "document_chunks_count": 0,
+        "transcript_segments_count": 0,
+        "video_events_count": 3,
+        "image_observations_count": 0,
+        "embedding_status": "completed",
+        "processing_time_ms": 103.47,
+        "extraction_method_used": "mock_fallback",
+        "error_message": null
+      }
     },
     "EVD-002": {
       "id": "EVD-002",
@@ -64,7 +131,7 @@
       "file_type": "audio/wav",
       "file_size": 88394956,
       "status": "analyzed",
-      "processing_stage": "ready_for_ai",
+      "processing_stage": "processed",
       "storage_path": "uploads/CASE-001/witness_statement.wav",
       "content": "Audio statement from bystander Elena R. describing traffic signal change as Vehicle A approached the intersection.",
       "timestamp_start": "02:16",
@@ -87,7 +154,74 @@
           "target": "Vehicle B turn initiation timing",
           "confidence": 88.0
         }
-      ]
+      ],
+      "extracted_units": [
+        {
+          "case_id": "CASE-001",
+          "source_file": "witness_statement.wav",
+          "modality": "audio",
+          "content": "I was standing outside the coffee shop on Market Street when I heard the engine acceleration.",
+          "timestamp_start": 12.0,
+          "timestamp_end": 28.5,
+          "speaker": "Elena R. (Witness)",
+          "confidence": 0.95,
+          "evidence_type": "transcript",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-002",
+          "parent_evidence_id": "EVD-002",
+          "id": "EVD-002_seg_001",
+          "created_at": "2026-10-06T06:48:31.169614+00:00"
+        },
+        {
+          "case_id": "CASE-001",
+          "source_file": "witness_statement.wav",
+          "modality": "audio",
+          "content": "The vehicle was stationary before impact while waiting for the turn signal to clear.",
+          "timestamp_start": 138.0,
+          "timestamp_end": 151.0,
+          "speaker": "Elena R. (Witness)",
+          "confidence": 0.94,
+          "evidence_type": "transcript",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-002",
+          "parent_evidence_id": "EVD-002",
+          "id": "EVD-002_seg_002",
+          "created_at": "2026-10-06T06:48:31.169614+00:00"
+        },
+        {
+          "case_id": "CASE-001",
+          "source_file": "witness_statement.wav",
+          "modality": "audio",
+          "content": "The light was yellow for northbound traffic when Vehicle B initiated the left turn.",
+          "timestamp_start": 195.0,
+          "timestamp_end": 210.0,
+          "speaker": "Elena R. (Witness)",
+          "confidence": 0.91,
+          "evidence_type": "transcript",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-002",
+          "parent_evidence_id": "EVD-002",
+          "id": "EVD-002_seg_003",
+          "created_at": "2026-10-06T06:48:31.169614+00:00"
+        }
+      ],
+      "ai_summary": {
+        "evidence_id": "EVD-002",
+        "case_id": "CASE-001",
+        "source_file": "witness_statement.wav",
+        "modality": "audio",
+        "status": "processed",
+        "processing_stage": "processed",
+        "extracted_units_count": 3,
+        "document_chunks_count": 0,
+        "transcript_segments_count": 3,
+        "video_events_count": 0,
+        "image_observations_count": 0,
+        "embedding_status": "completed",
+        "processing_time_ms": 93.15,
+        "extraction_method_used": "mock_fallback",
+        "error_message": null
+      }
     },
     "EVD-003": {
       "id": "EVD-003",
@@ -97,7 +231,7 @@
       "file_type": "application/pdf",
       "file_size": 2936012,
       "status": "analyzed",
-      "processing_stage": "ready_for_ai",
+      "processing_stage": "processed",
       "storage_path": "uploads/CASE-001/police_report.pdf",
       "content": "Official initial police incident report filed by Officer J. Vance documenting scene observations, weather conditions, and driver statements.",
       "page": 4,
@@ -118,7 +252,68 @@
           "target": "Insurance claim liability details",
           "confidence": 91.0
         }
-      ]
+      ],
+      "extracted_units": [
+        {
+          "case_id": "CASE-001",
+          "source_file": "police_report.pdf",
+          "modality": "document",
+          "content": "Official Incident Report: Two-vehicle collision occurred at intersection of 5th Ave and Market Street on Jan 14, 2025.",
+          "page": 1,
+          "confidence": 0.97,
+          "evidence_type": "document_text",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-003",
+          "parent_evidence_id": "EVD-003",
+          "id": "EVD-003_chunk_001",
+          "created_at": "2026-10-06T06:43:32.409917+00:00"
+        },
+        {
+          "case_id": "CASE-001",
+          "source_file": "police_report.pdf",
+          "modality": "document",
+          "content": "Officer J. Vance noted dry asphalt conditions, clear visibility, and functioning traffic signals at time of dispatch.",
+          "page": 3,
+          "confidence": 0.95,
+          "evidence_type": "document_text",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-003",
+          "parent_evidence_id": "EVD-003",
+          "id": "EVD-003_chunk_002",
+          "created_at": "2026-10-06T06:43:32.409917+00:00"
+        },
+        {
+          "case_id": "CASE-001",
+          "source_file": "police_report.pdf",
+          "modality": "document",
+          "content": "Collision occurred approximately at 18:41:20 based on initial telemetry and dispatch log timestamping.",
+          "page": 7,
+          "confidence": 0.97,
+          "evidence_type": "document_text",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-003",
+          "parent_evidence_id": "EVD-003",
+          "id": "EVD-003_chunk_003",
+          "created_at": "2026-10-06T06:43:32.409917+00:00"
+        }
+      ],
+      "ai_summary": {
+        "evidence_id": "EVD-003",
+        "case_id": "CASE-001",
+        "source_file": "police_report.pdf",
+        "modality": "document",
+        "status": "processed",
+        "processing_stage": "processed",
+        "extracted_units_count": 3,
+        "document_chunks_count": 3,
+        "transcript_segments_count": 0,
+        "video_events_count": 0,
+        "image_observations_count": 0,
+        "embedding_status": "completed",
+        "processing_time_ms": 116.91,
+        "extraction_method_used": "mock_fallback",
+        "error_message": null
+      }
     },
     "EVD-004": {
       "id": "EVD-004",
@@ -128,7 +323,7 @@
       "file_type": "application/pdf",
       "file_size": 1468006,
       "status": "analyzed",
-      "processing_stage": "ready_for_ai",
+      "processing_stage": "processed",
       "storage_path": "uploads/CASE-001/insurance_claim.pdf",
       "content": "First notice of loss claim report submitted by Vehicle A policyholder citing green light intersection entry.",
       "page": 2,
@@ -144,7 +339,54 @@
           "target": "Vehicle A pre-collision heading",
           "confidence": 90.0
         }
-      ]
+      ],
+      "extracted_units": [
+        {
+          "case_id": "CASE-001",
+          "source_file": "insurance_claim.pdf",
+          "modality": "document",
+          "content": "First Notice of Loss: Policyholder states Vehicle A entered intersection eastbound under a solid green light before impact.",
+          "page": 1,
+          "confidence": 0.91,
+          "evidence_type": "document_text",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-004",
+          "parent_evidence_id": "EVD-004",
+          "id": "EVD-004_chunk_001",
+          "created_at": "2026-10-06T06:43:32.543605+00:00"
+        },
+        {
+          "case_id": "CASE-001",
+          "source_file": "insurance_claim.pdf",
+          "modality": "document",
+          "content": "Driver reported moderate front-left bumper impact resulting in steering alignment failure and non-drivable state.",
+          "page": 2,
+          "confidence": 0.89,
+          "evidence_type": "document_text",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-004",
+          "parent_evidence_id": "EVD-004",
+          "id": "EVD-004_chunk_002",
+          "created_at": "2026-10-06T06:43:32.543605+00:00"
+        }
+      ],
+      "ai_summary": {
+        "evidence_id": "EVD-004",
+        "case_id": "CASE-001",
+        "source_file": "insurance_claim.pdf",
+        "modality": "document",
+        "status": "processed",
+        "processing_stage": "processed",
+        "extracted_units_count": 2,
+        "document_chunks_count": 2,
+        "transcript_segments_count": 0,
+        "video_events_count": 0,
+        "image_observations_count": 0,
+        "embedding_status": "completed",
+        "processing_time_ms": 118.82,
+        "extraction_method_used": "mock_fallback",
+        "error_message": null
+      }
     },
     "EVD-005": {
       "id": "EVD-005",
@@ -154,7 +396,7 @@
       "file_type": "application/pdf",
       "file_size": 911360,
       "status": "analyzed",
-      "processing_stage": "ready_for_ai",
+      "processing_stage": "processed",
       "storage_path": "uploads/CASE-001/repair_estimate.pdf",
       "content": "Comprehensive mechanical repair estimate detailing structural deformation to Vehicle A front-left bumper, fender, and suspension.",
       "page": 1,
@@ -170,7 +412,54 @@
           "target": "Vehicle damage photo visual geometry",
           "confidence": 97.0
         }
-      ]
+      ],
+      "extracted_units": [
+        {
+          "case_id": "CASE-001",
+          "source_file": "repair_estimate.pdf",
+          "modality": "document",
+          "content": "Damage Inspection: Major structural deformation to Vehicle A front-left bumper, subframe rail, and front suspension assembly.",
+          "page": 1,
+          "confidence": 0.96,
+          "evidence_type": "document_table",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-005",
+          "parent_evidence_id": "EVD-005",
+          "id": "EVD-005_chunk_001",
+          "created_at": "2026-10-06T06:43:32.679529+00:00"
+        },
+        {
+          "case_id": "CASE-001",
+          "source_file": "repair_estimate.pdf",
+          "modality": "document",
+          "content": "Total estimated repair cost: $14,280.00 including OEM structural replacement and alignment calibration.",
+          "page": 3,
+          "confidence": 0.94,
+          "evidence_type": "document_table",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-005",
+          "parent_evidence_id": "EVD-005",
+          "id": "EVD-005_chunk_002",
+          "created_at": "2026-10-06T06:43:32.679529+00:00"
+        }
+      ],
+      "ai_summary": {
+        "evidence_id": "EVD-005",
+        "case_id": "CASE-001",
+        "source_file": "repair_estimate.pdf",
+        "modality": "document",
+        "status": "processed",
+        "processing_stage": "processed",
+        "extracted_units_count": 2,
+        "document_chunks_count": 2,
+        "transcript_segments_count": 0,
+        "video_events_count": 0,
+        "image_observations_count": 0,
+        "embedding_status": "completed",
+        "processing_time_ms": 134.07,
+        "extraction_method_used": "mock_fallback",
+        "error_message": null
+      }
     },
     "EVD-006": {
       "id": "EVD-006",
@@ -180,7 +469,7 @@
       "file_type": "image/jpeg",
       "file_size": 13002342,
       "status": "analyzed",
-      "processing_stage": "ready_for_ai",
+      "processing_stage": "processed",
       "storage_path": "uploads/CASE-001/vehicle_damage_01.jpg",
       "content": "High-resolution post-collision photograph of Vehicle A front-left quarter deformation taken at scene.",
       "confidence": 97.0,
@@ -195,7 +484,43 @@
           "target": "Estimated 38° impact angle calculation",
           "confidence": 96.0
         }
-      ]
+      ],
+      "extracted_units": [
+        {
+          "case_id": "CASE-001",
+          "source_file": "vehicle_damage_01.jpg",
+          "modality": "image",
+          "content": "Visible damage is concentrated near the front-left bumper, headlamp housing, and front fender panel of the vehicle.",
+          "timestamp_start": null,
+          "timestamp_end": null,
+          "page": null,
+          "speaker": null,
+          "confidence": 0.86,
+          "evidence_type": "image_observation",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-006",
+          "parent_evidence_id": "EVD-006",
+          "id": "EVD-006_obs_001",
+          "created_at": "2026-10-06T06:43:32.847165+00:00"
+        }
+      ],
+      "ai_summary": {
+        "evidence_id": "EVD-006",
+        "case_id": "CASE-001",
+        "source_file": "vehicle_damage_01.jpg",
+        "modality": "image",
+        "status": "processed",
+        "processing_stage": "processed",
+        "extracted_units_count": 1,
+        "document_chunks_count": 0,
+        "transcript_segments_count": 0,
+        "video_events_count": 0,
+        "image_observations_count": 1,
+        "embedding_status": "completed",
+        "processing_time_ms": 130.35,
+        "extraction_method_used": "mock_fallback",
+        "error_message": null
+      }
     },
     "EVD-007": {
       "id": "EVD-007",
@@ -205,7 +530,7 @@
       "file_type": "image/jpeg",
       "file_size": 12373196,
       "status": "analyzed",
-      "processing_stage": "ready_for_ai",
+      "processing_stage": "processed",
       "storage_path": "uploads/CASE-001/vehicle_damage_02.jpg",
       "content": "High-resolution photograph of Vehicle B passenger side impact panel showing paint transfer and dent depth profile.",
       "confidence": 96.0,
@@ -220,7 +545,43 @@
           "target": "Vehicle A paint match & kinetic transfer",
           "confidence": 94.0
         }
-      ]
+      ],
+      "extracted_units": [
+        {
+          "case_id": "CASE-001",
+          "source_file": "vehicle_damage_02.jpg",
+          "modality": "image",
+          "content": "High-resolution photo showing deep side door impact panel deformation with clear paint transfer marks and panel crease.",
+          "timestamp_start": null,
+          "timestamp_end": null,
+          "page": null,
+          "speaker": null,
+          "confidence": 0.94,
+          "evidence_type": "image_observation",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "EVD-007",
+          "parent_evidence_id": "EVD-007",
+          "id": "EVD-007_obs_001",
+          "created_at": "2026-10-06T06:43:32.995825+00:00"
+        }
+      ],
+      "ai_summary": {
+        "evidence_id": "EVD-007",
+        "case_id": "CASE-001",
+        "source_file": "vehicle_damage_02.jpg",
+        "modality": "image",
+        "status": "processed",
+        "processing_stage": "processed",
+        "extracted_units_count": 1,
+        "document_chunks_count": 0,
+        "transcript_segments_count": 0,
+        "video_events_count": 0,
+        "image_observations_count": 1,
+        "embedding_status": "completed",
+        "processing_time_ms": 119.92,
+        "extraction_method_used": "mock_fallback",
+        "error_message": null
+      }
     },
     "evidence_e6a48f5063": {
       "id": "evidence_e6a48f5063",
@@ -229,10 +590,10 @@
       "modality": "document",
       "file_type": "application/pdf",
       "file_size": 179,
-      "status": "uploaded",
-      "processing_stage": "ready_for_ai",
+      "status": "analyzed",
+      "processing_stage": "processed",
       "storage_path": "uploads/CASE-001/police_report.pdf",
-      "content": null,
+      "content": "Official Incident Report: Two-vehicle collision occurred at intersection of 5th Ave and Market Street on Jan 14, 2025.",
       "timestamp_start": null,
       "timestamp_end": null,
       "page": 1,
@@ -246,7 +607,68 @@
         "file_size_formatted": "179 B",
         "page_count": 1
       },
-      "relationships": []
+      "relationships": [],
+      "extracted_units": [
+        {
+          "case_id": "CASE-001",
+          "source_file": "police_report.pdf",
+          "modality": "document",
+          "content": "Official Incident Report: Two-vehicle collision occurred at intersection of 5th Ave and Market Street on Jan 14, 2025.",
+          "page": 1,
+          "confidence": 0.97,
+          "evidence_type": "document_text",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "evidence_e6a48f5063",
+          "parent_evidence_id": "evidence_e6a48f5063",
+          "id": "evidence_e6a48f5063_chunk_001",
+          "created_at": "2026-10-06T06:43:33.130439+00:00"
+        },
+        {
+          "case_id": "CASE-001",
+          "source_file": "police_report.pdf",
+          "modality": "document",
+          "content": "Officer J. Vance noted dry asphalt conditions, clear visibility, and functioning traffic signals at time of dispatch.",
+          "page": 3,
+          "confidence": 0.95,
+          "evidence_type": "document_text",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "evidence_e6a48f5063",
+          "parent_evidence_id": "evidence_e6a48f5063",
+          "id": "evidence_e6a48f5063_chunk_002",
+          "created_at": "2026-10-06T06:43:33.130439+00:00"
+        },
+        {
+          "case_id": "CASE-001",
+          "source_file": "police_report.pdf",
+          "modality": "document",
+          "content": "Collision occurred approximately at 18:41:20 based on initial telemetry and dispatch log timestamping.",
+          "page": 7,
+          "confidence": 0.97,
+          "evidence_type": "document_text",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "evidence_e6a48f5063",
+          "parent_evidence_id": "evidence_e6a48f5063",
+          "id": "evidence_e6a48f5063_chunk_003",
+          "created_at": "2026-10-06T06:43:33.130439+00:00"
+        }
+      ],
+      "ai_summary": {
+        "evidence_id": "evidence_e6a48f5063",
+        "case_id": "CASE-001",
+        "source_file": "police_report.pdf",
+        "modality": "document",
+        "status": "processed",
+        "processing_stage": "processed",
+        "extracted_units_count": 3,
+        "document_chunks_count": 3,
+        "transcript_segments_count": 0,
+        "video_events_count": 0,
+        "image_observations_count": 0,
+        "embedding_status": "completed",
+        "processing_time_ms": 117.11,
+        "extraction_method_used": "mock_fallback",
+        "error_message": null
+      }
     },
     "evidence_5521e7b85f": {
       "id": "evidence_5521e7b85f",
@@ -255,10 +677,10 @@
       "modality": "image",
       "file_type": "image/png",
       "file_size": 70,
-      "status": "uploaded",
-      "processing_stage": "ready_for_ai",
+      "status": "analyzed",
+      "processing_stage": "processed",
       "storage_path": "uploads/CASE-001/vehicle_damage_01.jpg",
-      "content": null,
+      "content": "Visible damage is concentrated near the front-left bumper, headlamp housing, and front fender panel of the vehicle.",
       "timestamp_start": null,
       "timestamp_end": null,
       "page": null,
@@ -271,7 +693,43 @@
         "file_size": 70,
         "file_size_formatted": "70 B"
       },
-      "relationships": []
+      "relationships": [],
+      "extracted_units": [
+        {
+          "case_id": "CASE-001",
+          "source_file": "vehicle_damage_01.jpg",
+          "modality": "image",
+          "content": "Visible damage is concentrated near the front-left bumper, headlamp housing, and front fender panel of the vehicle.",
+          "timestamp_start": null,
+          "timestamp_end": null,
+          "page": null,
+          "speaker": null,
+          "confidence": 0.86,
+          "evidence_type": "image_observation",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "evidence_5521e7b85f",
+          "parent_evidence_id": "evidence_5521e7b85f",
+          "id": "evidence_5521e7b85f_obs_001",
+          "created_at": "2026-10-06T06:43:33.269259+00:00"
+        }
+      ],
+      "ai_summary": {
+        "evidence_id": "evidence_5521e7b85f",
+        "case_id": "CASE-001",
+        "source_file": "vehicle_damage_01.jpg",
+        "modality": "image",
+        "status": "processed",
+        "processing_stage": "processed",
+        "extracted_units_count": 1,
+        "document_chunks_count": 0,
+        "transcript_segments_count": 0,
+        "video_events_count": 0,
+        "image_observations_count": 1,
+        "embedding_status": "completed",
+        "processing_time_ms": 119.57,
+        "extraction_method_used": "mock_fallback",
+        "error_message": null
+      }
     },
     "evidence_25c0c8c5a8": {
       "id": "evidence_25c0c8c5a8",
@@ -280,10 +738,10 @@
       "modality": "audio",
       "file_type": "audio/wav",
       "file_size": 44,
-      "status": "uploaded",
-      "processing_stage": "ready_for_ai",
+      "status": "analyzed",
+      "processing_stage": "processed",
       "storage_path": "uploads/CASE-001/witness_statement.wav",
-      "content": null,
+      "content": "I was standing outside the coffee shop on Market Street when I heard the engine acceleration.",
       "timestamp_start": null,
       "timestamp_end": null,
       "page": null,
@@ -301,7 +759,74 @@
         "duration_seconds": 0.0,
         "duration_formatted": "00:00.000"
       },
-      "relationships": []
+      "relationships": [],
+      "extracted_units": [
+        {
+          "case_id": "CASE-001",
+          "source_file": "witness_statement.wav",
+          "modality": "audio",
+          "content": "I was standing outside the coffee shop on Market Street when I heard the engine acceleration.",
+          "timestamp_start": 12.0,
+          "timestamp_end": 28.5,
+          "speaker": "Elena R. (Witness)",
+          "confidence": 0.95,
+          "evidence_type": "transcript",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "evidence_25c0c8c5a8",
+          "parent_evidence_id": "evidence_25c0c8c5a8",
+          "id": "evidence_25c0c8c5a8_seg_001",
+          "created_at": "2026-10-06T06:43:33.410822+00:00"
+        },
+        {
+          "case_id": "CASE-001",
+          "source_file": "witness_statement.wav",
+          "modality": "audio",
+          "content": "The vehicle was stationary before impact while waiting for the turn signal to clear.",
+          "timestamp_start": 138.0,
+          "timestamp_end": 151.0,
+          "speaker": "Elena R. (Witness)",
+          "confidence": 0.94,
+          "evidence_type": "transcript",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "evidence_25c0c8c5a8",
+          "parent_evidence_id": "evidence_25c0c8c5a8",
+          "id": "evidence_25c0c8c5a8_seg_002",
+          "created_at": "2026-10-06T06:43:33.410822+00:00"
+        },
+        {
+          "case_id": "CASE-001",
+          "source_file": "witness_statement.wav",
+          "modality": "audio",
+          "content": "The light was yellow for northbound traffic when Vehicle B initiated the left turn.",
+          "timestamp_start": 195.0,
+          "timestamp_end": 210.0,
+          "speaker": "Elena R. (Witness)",
+          "confidence": 0.91,
+          "evidence_type": "transcript",
+          "extraction_method": "mock_fallback",
+          "evidence_id": "evidence_25c0c8c5a8",
+          "parent_evidence_id": "evidence_25c0c8c5a8",
+          "id": "evidence_25c0c8c5a8_seg_003",
+          "created_at": "2026-10-06T06:43:33.410822+00:00"
+        }
+      ],
+      "ai_summary": {
+        "evidence_id": "evidence_25c0c8c5a8",
+        "case_id": "CASE-001",
+        "source_file": "witness_statement.wav",
+        "modality": "audio",
+        "status": "processed",
+        "processing_stage": "processed",
+        "extracted_units_count": 3,
+        "document_chunks_count": 0,
+        "transcript_segments_count": 3,
+        "video_events_count": 0,
+        "image_observations_count": 0,
+        "embedding_status": "completed",
+        "processing_time_ms": 110.83,
+        "extraction_method_used": "mock_fallback",
+        "error_message": null
+      }
     }
   }
 }
